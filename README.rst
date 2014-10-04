@@ -8,6 +8,6 @@ Community maintained documentation for the `tintin++ mud client <http://tintin.s
 
 
 
-.. image:: https://readthedocs.org/projects/tintinplusplus-unoffical-documentation/badge/?version=latest
-:target: https://readthedocs.org/projects/tintinplusplus-unoffical-documentation/?badge=latest
-:alt: Documentation Status
+    .. image:: https://readthedocs.org/projects/tintinplusplus-unoffical-documentation/badge/?version=latest
+    :target: https://readthedocs.org/projects/tintinplusplus-unoffical-documentation/?badge=latest
+    :alt: Documentation Status
