@@ -1,13 +1,29 @@
 ========
 Pitfalls
 ========
-Issues I've encountered that tripped me up.
+Issues that commonly trip up users.
 
 
 ----------
 Data Types
 ----------
 The data type documentation is significantly lacking. The table data type is completely undocumented. I highly recommend making sure you understand them thoroughly first, as the parser is extremely particular about how data is stored and referenced - and will fail silently if anything is out of place.
+
+
+-------------------------
+If Statement Terminations
+-------------------------
+When a statement is on a line all by itself, you need to (in most cases) terminate it with a semicolon (;). This is sometimes not required for block statements, such as #IF statements::
+
+    #if { condition } {
+        commands
+    }
+
+The previous code works fine - most of the time. However, if this code is in an alias and that alias is called from within an #if block somewhere else, the code will break ... for that occurrence only. The practical solution is to terminate all these code blocks explicitly::
+
+    #if { condition } {
+        commands
+    };
 
 
 ---------------
@@ -22,6 +38,7 @@ You will not see error messages from these files. This present a significant pro
 You can force verbose output by prefixing the #read commands with #line verbose.
 
 TODO: Test how #line log works with #line verbose.
+
 
 -------------------
 Variable Collisions
@@ -67,7 +84,7 @@ Command Files
 Command files must start with a #tintin command. If they don't, they'll fail to load. If you're loading the file through an alias it will silently fail to load.
 To make sure this never happens, I start every file with:
 
-    #nop VSOF; 
+    #nop VSOF;
 
 And regardless of how I modify my code, that line is never changed.
 Note: The error message displayed when this happens is "Invalid start of file." Hence VSOF (Valid Start of FIile).
