@@ -3,12 +3,10 @@ TinTin++ Unofficial Documentation
 =================================
 
 .. toctree::
+   :glob:
    :maxdepth: 2
 
-   features.rst
-   pitfalls.rst
-   debugging.rst
-   cookbook.rst
+   contents/*
 
 -----
 Notes

@@ -13,7 +13,7 @@ The mapper also has the capabilities for storing metadata about each room that c
 
 But map set shows them all (I believe):
 
-    roomarea: 
+    roomarea:
     roomcolor:
     roomdata:
     roomdesc:

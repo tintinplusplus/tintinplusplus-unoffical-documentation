@@ -83,8 +83,7 @@ Sometimes, entire areas should be hidden from a view until they are entered. To 
 
     #map insert <direction> void
 
-Note the vnum of the room that was created, because we will need to set the hide flag on it as well::
-
+Note the vnum of the room that was created, because we will need to set the hide flag on it as well.
 
 To do this, you create a "void" room (this is basically a place marker in the map) and set it's hidden flag to 1. When you navigate to this room you'll pass over it in whatever direction you were already going.
 
