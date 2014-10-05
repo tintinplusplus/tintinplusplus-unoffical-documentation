@@ -120,7 +120,7 @@ coverage.xml
 *.log
 
 # Sphinx documentation
-docs/build/
+build/
 
 # PyBuilder
 target/
